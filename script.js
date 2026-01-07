@@ -1,7 +1,7 @@
 // ===== CONFIG - REPLACE BEFORE USE =====
-const DISCORD_CLIENT_ID = "1425187145953448127";
-const REDIRECT_URI = "https://095d2c74-abf7-409e-bbe6-d7b41546e93f-00-1t1wecju9p46c.picard.replit.dev/"; // must match Discord app redirect URI exactly
-const DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1425543224436461780/aA7jkvaIpEwnzYhvS9o7DwcpLKpniRXlBXQNV5RtFbKuG6kFzyP7p1Qnig_33bjw1hf7"; // optional
+const DISCORD_CLIENT_ID = "1440421310688792708";
+const REDIRECT_URI = "https://lookslollolol.netlify.app/"; // must match Discord app redirect URI exactly
+const DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1454107389925261333/tpptkoFwqtPt7pDYY1yQlij7x--kmKBEDEeCSdvotQNky5ZbZ-phTHfiTPyI2viw9S5c"; // optional
 const GROQ_API_KEY = "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"; // only for local testing; prefer /api/chat proxy
 
 // ===== ELEMENT SELECTORS =====
