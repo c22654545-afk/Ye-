@@ -1,0 +1,70 @@
+/* Basic reset & fonts */
+*{box-sizing:border-box;margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;}
+body{background:#ffffff;color:#111;display:flex;justify-content:center;align-items:center;min-height:100vh;padding:20px;}
+
+/* Page container */
+.page{width:100%;max-width:900px;}
+
+/* Center login card */
+.center{display:flex;flex-direction:column;align-items:center;gap:12px;background:#fbfbfd;border-radius:12px;padding:28px;box-shadow:0 6px 30px rgba(14,20,30,0.06);border:1px solid #eef2f7;}
+.muted{color:#666;font-size:13px;}
+
+/* Header */
+.header{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;}
+.brand{font-weight:700;font-size:18px;color:#0f62fe;}
+.controls-right{display:flex;align-items:center;gap:12px;}
+
+/* Icon & menu */
+.icon-btn{background:transparent;border:0;font-size:20px;cursor:pointer;padding:6px;border-radius:8px;}
+.icon-btn:hover{background:#f3f6ff;}
+.menu-dropdown{display:none;position:absolute;right:0;margin-top:8px;background:#fff;border:1px solid #eef2f7;box-shadow:0 6px 20px rgba(12,18,28,0.08);border-radius:8px;overflow:hidden;z-index:120;}
+.menu-dropdown button{display:block;padding:10px 14px;background:none;border:0;text-align:left;width:160px;cursor:pointer;font-weight:600;}
+.menu-dropdown button:hover{background:#f5f7fb;}
+
+/* Profile & dropdown */
+.profile img{width:40px;height:40px;border-radius:50%;border:2px solid #eef2f7;cursor:pointer;display:block;}
+.profile-dropdown{display:none;position:absolute;right:18px;top:62px;background:#fff;border:1px solid #eef2f7;box-shadow:0 8px 30px rgba(10,20,30,0.08);border-radius:8px;padding:8px;z-index:125;}
+.logout-btn{background:#ff5c5c;color:#fff;padding:8px 12px;border-radius:8px;border:0;cursor:pointer;font-weight:700;}
+
+/* Main area */
+.main{display:flex;flex-direction:column;gap:12px;}
+.chat-box{min-height:360px;max-height:60vh;overflow:auto;padding:16px;background:#fbfbfd;border-radius:12px;border:1px solid #eef2f7;display:flex;flex-direction:column;gap:12px;}
+
+/* Messages */
+.message-wrapper{display:flex;align-items:flex-end;gap:10px;}
+.message-wrapper.user{justify-content:flex-end;}
+.message-wrapper.bot{justify-content:flex-start;}
+.avatar{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.avatar.bot{background:#f0f0f0;color:#111;font-size:18px;}
+.avatar.user img{width:36px;height:36px;border-radius:50%;}
+.message{padding:12px 16px;border-radius:14px;max-width:78%;white-space:pre-wrap;line-height:1.5;box-shadow:0 6px 18px rgba(12,18,28,0.06);}
+/* user = dark blue with white text, bot = white with dark text */
+.user .message{background:#0f3aa6;color:#fff;border-bottom-right-radius:6px;}
+.bot .message{background:#ffffff;color:#111;border-bottom-left-radius:6px;}
+
+/* Typing style (small shimmer) */
+.message.typing::after{content:"";display:inline-block;width:36px;height:10px;margin-left:8px;border-radius:6px;background:linear-gradient(90deg,#fff 20%, rgba(255,255,255,0) 60%);animation:typing 1s steps(3) infinite;opacity:0.9;}
+@keyframes typing{0%{transform:translateX(-6px);}100%{transform:translateX(6px);}}
+
+/* Input */
+.input-area{display:flex;gap:10px;margin-top:6px;align-items:flex-end;}
+textarea{flex:1;min-height:56px;max-height:160px;padding:12px;border-radius:10px;border:1px solid #e6eaf0;resize:none;font-size:15px;}
+textarea:focus{outline:none;box-shadow:0 6px 20px rgba(15,98,254,0.06);border-color:#cfe0ff;}
+button.primary{background:#0f62fe;color:#fff;padding:10px 16px;border-radius:10px;border:0;font-weight:700;cursor:pointer;}
+button.primary:hover{background:#0b4fd3;}
+
+/* Modal (old chats) */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,0.45);display:flex;justify-content:center;align-items:center;z-index:200;}
+.modal-content{background:#fff;border-radius:12px;padding:16px;width:92%;max-width:520px;box-shadow:0 10px 40px rgba(0,0,0,0.2);}
+.modal-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;}
+.old-chat-list{list-style:none;max-height:320px;overflow:auto;padding:0;margin:0;}
+.old-chat-list li{padding:10px;border:1px solid #f0f2f5;border-radius:8px;margin-bottom:8px;cursor:pointer;}
+.old-chat-list li:hover{background:#fafbfd;}
+.hint{margin-top:8px;color:#666;font-size:13px;}
+
+/* Responsive */
+@media (max-width:600px){
+  .menu-dropdown{right:6px;}
+  .profile-dropdown{right:6px;}
+  .brand{font-size:16px;}
+}

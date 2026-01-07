@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cloud Ai</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- LOGIN PAGE -->
+  <div id="login-page" class="page">
+    <div class="card center">
+      <h1>☁️ Cloud Ai</h1>
+      <p>Login with Discord to continue</p>
+      <button id="discord-login" class="primary">Login with Discord</button>
+      <p class="muted">We request only profile info (username, email, avatar). No passwords.</p>
+    </div>
+  </div>
+
+  <!-- CHAT PAGE (hidden until login) -->
+  <div id="chat-page" class="page" style="display:none;">
+    <header class="header">
+      <div class="brand">☁️ Cloud Ai</div>
+
+      <div class="controls-right">
+        <div class="top-menu">
+          <button id="menu-btn" class="icon-btn" title="Menu">⋮</button>
+          <div id="menu-dropdown" class="menu-dropdown" aria-hidden="true">
+            <button id="new-chat">New Chat</button>
+            <button id="old-chat">Old Chats</button>
+          </div>
+        </div>
+
+        <div id="profile-area" class="profile" title="Profile (click to open logout)"></div>
+        <div id="profile-dropdown" class="profile-dropdown" aria-hidden="true">
+          <button id="logout-btn" class="logout-btn">Logout</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div id="chat-box" class="chat-box" aria-live="polite"></div>
+
+      <div class="input-area">
+        <textarea id="user-input" placeholder="Type your message... (Shift+Enter = newline)"></textarea>
+        <button id="send-btn" class="primary">Send</button>
+      </div>
+    </main>
+  </div>
+
+  <!-- OLD CHATS MODAL -->
+  <div id="old-chat-modal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Old Chats</h3>
+        <button id="close-old-chat" class="secondary">Close</button>
+      </div>
+      <ul id="old-chat-list" class="old-chat-list"></ul>
+      <p class="hint">Right-click (desktop) or long-press (mobile) an item to delete it.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
