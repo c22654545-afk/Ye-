@@ -2,7 +2,7 @@
 const DISCORD_CLIENT_ID = "1440421310688792708";
 const REDIRECT_URI = "https://lookslollolol.netlify.app/"; // must match Discord app redirect URI exactly
 const DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1454107389925261333/tpptkoFwqtPt7pDYY1yQlij7x--kmKBEDEeCSdvotQNky5ZbZ-phTHfiTPyI2viw9S5c"; // optional
-const GROQ_API_KEY = "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"; // only for local testing; prefer /api/chat proxy
+const GROQ_API_KEY = "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"; // only for local testing; prefer /api/chat proxy
 
 // ===== ELEMENT SELECTORS =====
 const loginPage = document.getElementById("login-page");
